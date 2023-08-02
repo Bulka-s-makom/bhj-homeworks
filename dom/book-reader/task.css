@@ -131,3 +131,15 @@ body {
 .text_color_whitesmoke {
   background: whitesmoke;
 }
+
+.text_black {
+  color: #000;
+}
+
+.text_gray {
+  color: grey;
+}
+
+.text_whitesmoke {
+  color: whitesmoke;
+}

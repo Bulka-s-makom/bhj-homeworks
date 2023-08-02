@@ -40,16 +40,15 @@ colors.forEach((color) => {
 
     someP.forEach((p) => {
         if (color.classList.contains('text_color_black')) {
-            p.classList.remove('text_color_gray', 'text_color_whitesmoke')
-            p.classList.add('text_color_black');
+            p.classList.remove('text_gray', 'text_whitesmoke')
+            p.classList.add('text_black');
           } else if (color.classList.contains('text_color_gray')) {
-            p.classList.remove('text_color_whitesmoke', 'text_color_black')
-            p.classList.add('text_color_gray');
-          } else {
-            p.classList.remove('text_color_black', 'text_color_gray');
-            p.classList.add('text_color_whitesmoke');
+            p.classList.remove('text_whitesmoke', 'text_black')
+            p.classList.add('text_gray');
+          } else if (color.classList.contains('text_color_whitesmoke')) {
+            p.classList.remove('text_black', 'text_gray');
+            p.classList.add('text_whitesmoke');
           }
     })
-    
   });
 });
