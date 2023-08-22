@@ -14,21 +14,21 @@ hasTooltips.forEach((hasTooltip) => {
     const tooltipTop = hasTooltip.offsetTop + hasTooltip.offsetHeight + 5;
     const tooltipLeft = hasTooltip.offsetLeft;
 
-    let isActive = false;
-
     tooltips.forEach((existingTooltip) => {
       if (existingTooltip.classList.contains('tooltip_active')) {
-        isActive = true;
         existingTooltip.classList.remove('tooltip_active');
         existingTooltip.remove();
       }
     });
 
-    if (!isActive) {
+    if (!hasTooltip.classList.contains('tooltip_active')) {
       document.body.appendChild(tooltip);
       tooltip.classList.add('tooltip_active');
       tooltip.style.top = tooltipTop + 'px';
       tooltip.style.left = tooltipLeft + 'px';
+    } else {
+      tooltip.classList.remove('tooltip_active');
+      tooltip.remove();
     }
   });
 });
